@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:"Inter" , sans-serif;
+}
+
+body{
+  background-color: #A9B5DF;
+}
+
+.chatbot{
+   position: fixed;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: 450PX;
+   background: #fff;
+   border-radius: 10px; 
+   box-shadow: 0 0 128px rgba(0,0,0,0.1) 
+               0 32px 64px -48px rgba(0, 0,0, 0.5);
+}
+
+
+.chatbot header{
+  background-color: #2D336B;
+  padding: 16px 0; 
+  text-align: center;
+  border-radius: 10px 10px 0 0 ;
+}
+
+.chatbot header h2{
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.chatbot .chatbox{
+  height: 510px;
+  overflow-y: auto;
+  padding: 30px 20px 70px;
+}
+
+.chatbox .chat{
+  display: flex;
+}
+
+.chatbox .chat p{
+ background: #2D336B;
+ padding: 12px 16px;
+ border-radius: 15px 15px 0 15px;
+ color: #fff;
+ font-size: 0.95rem;
+ max-width: 75%;
+}
+
+.chatbox .incoming p{
+  color: black;
+  background: #f2f2f2;
+  border-radius: 15px 15px 15px 0;
+}
+
+.chatbox .outgoing{
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+.chatbox .outgoing span{
+  height: 32px;
+  width: 32px;
+  color: #fff;
+  background: #2D336B;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 4px;
+  margin: 0 10px 7px 0;
+  align-self: flex-end;
+}
+
+.chatbot .chat-input{
+  position: absolute; 
+  display: flex;
+  gap: 5px;
+  bottom: 0;
+  width: 90%;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  padding: 5px 20PX; 
+}
+
+.chat-input textarea{
+  border: none;
+  outline: none;
+  height: 55px;
+  width: 100%;
+  font-size: 0.95rem;
+  resize: none;
+  padding: 16px 15px 16px 0;
+}
+
+.chat-input span{
+  align-self: flex-end;
+  height: 55px;
+  line-height: 55px;
+  color: #2D336B;
+  font-size: 1.35rem;
+  cursor: pointer;
+}

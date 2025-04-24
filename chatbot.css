@@ -8,7 +8,8 @@
 }
 
 body{
-  background-color: #A9B5DF;
+  height: 100vh;
+  background-color: #7196E7;
 }
 
 .chatbot{
@@ -25,15 +26,29 @@ body{
 
 
 .chatbot header{
-  background-color: #2D336B;
-  padding: 16px 0; 
-  text-align: center;
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+  background-color: #1E4BAE;
+  padding: 16px 20px; 
+  /*text-align: center; */
   border-radius: 10px 10px 0 0 ;
+}
+
+.header-left{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo{
+  height: 50px;
+  width: auto;
 }
 
 .chatbot header h2{
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .chatbot .chatbox{
@@ -47,7 +62,7 @@ body{
 }
 
 .chatbox .chat p{
- background: #2D336B;
+ background:#1E4BAE;
  padding: 12px 16px;
  border-radius: 15px 15px 0 15px;
  color: #fff;
@@ -70,7 +85,7 @@ body{
   height: 32px;
   width: 32px;
   color: #fff;
-  background: #2D336B;
+  background: #1E4BAE;
   text-align: center;
   line-height: 32px;
   border-radius: 4px;
@@ -106,4 +121,98 @@ body{
   color: #2D336B;
   font-size: 1.35rem;
   cursor: pointer;
+}
+
+
+/* dark mode tggele styling*/
+
+.dark{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.input {
+  opacity: 0;
+  position: absolute;
+}
+
+.label{
+  position: relative;
+  height: 24px;
+  width: 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.circle{
+  height: 20px;
+  width: 20px;
+  background-color: #1E4BAE;
+  position: absolute;
+  border-radius: 50%;
+  top: 2.5px;
+  left: 2.5px;
+  animation: toggleOn 0.4s linear forwards;
+}
+
+input:checked + .label .circle{
+  animation: toggleOff 0.4s linear forwards;
+}
+
+
+@keyframes toggleOn{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(26px);
+  }
+}
+
+@keyframes toggleOff{
+  0%{
+    transform: translateX(26px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+.dark-mode {
+  background-color: #1a1a2e; 
+}
+
+.dark-mode .chatbot {
+  background: #16213e; 
+  color: #fff;
+  border-radius: 10px;
+}
+
+.dark-mode .chatbot header {
+  background-color: #0f3460;
+}
+
+.dark-mode .chatbox {
+  background: #16213e; 
+  color: #fff;
+  border-radius: 10px;
+}
+
+.dark-mode .chat-input {
+  background: #16213e;
+  border-top: 1px solid #0f3460;
+}
+
+.dark-mode .chat-input textarea {
+  background: #16213e;
+  color: #fff;
+}
+
+.dark-mode .incoming p {
+  color: #fff ;
+  background: #0f3460;
 }

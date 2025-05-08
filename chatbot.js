@@ -30,8 +30,9 @@ let userMsg;
 
 // Configure your Rasa server URL
  // Update with your actual Rasa server URL 
- 
- const RASA_SERVER_URL = "http://localhost:5005/webhooks/rest/webhook";
+ const RASA_SERVER_URL = "https://intelligent-chatbot-for-cellule-1275-des.onrender.com/webhooks/rest/webhook";
+
+
 
 const createChatSection = (msg, className) => {
   const chatSection = document.createElement("section");

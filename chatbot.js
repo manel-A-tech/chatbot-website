@@ -28,11 +28,8 @@ const sendChatBtn = document.querySelector(".chat-input span");
 const chatbox = document.querySelector(".chatbox");
 let userMsg;
 
-// Configure your Rasa server URL
- // Update with your actual Rasa server URL 
- const RASA_SERVER_URL = "intelligent-chatbot-for-cellule-1275-des-startup-production.up.railway.app";
-
-
+// Configure your Rasa server URL with the proper protocol and webhook endpoint
+const RASA_SERVER_URL = "https://intelligent-chatbot-for-cellule-1275-des-startup-production.up.railway.app/webhooks/rest/webhook";
 
 const createChatSection = (msg, className) => {
   const chatSection = document.createElement("section");
@@ -49,8 +46,9 @@ const createChatSection = (msg, className) => {
 // Function to send message to Rasa and get response
 const sendMessageToRasa = async (message) => {
   try {
-   // console.log("Sending message to Rasa:", message);
-   // console.log("URL:", RASA_SERVER_URL);
+    console.log("Sending message to Rasa:", message);
+    console.log("URL:", RASA_SERVER_URL);
+    
     const response = await fetch(RASA_SERVER_URL, {
       method: "POST",
       headers: {
@@ -61,14 +59,15 @@ const sendMessageToRasa = async (message) => {
         message: message 
       }),
     });
-   // console.log("Response status:", response.status);
+    
+    console.log("Response status:", response.status);
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     const data = await response.json();
-   // console.log("Rasa response:", data);
+    console.log("Rasa response:", data);
     return data;
   } catch (error) {
     console.error("Error communicating with Rasa:", error);
@@ -121,6 +120,9 @@ const handleChat = async () => {
 
 // Send message when send button is clicked
 sendChatBtn.addEventListener("click", handleChat);
+
+// Fix selector to match the HTML
+document.querySelector("#send-btn").addEventListener("click", handleChat);
 
 // Send message when Enter key is pressed (without Shift)
 chatInput.addEventListener("keydown", (e) => {

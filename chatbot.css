@@ -189,6 +189,50 @@ input:checked + .label .circle{
   }
 }
 
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+  .chatbot {
+    width: 95%;
+  }
+  
+  .chatbot .chatbox {
+    height: 450px; /* Reduced height for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .chatbot header {
+    padding: 12px 15px;
+  }
+  
+  .logo {
+    height: 30px; /* Further reduced for mobile */
+  }
+  .chatbot header h2 {
+    font-size: 1rem;
+  }
+  
+  .chatbot .chatbox {
+    height: 400px; /* Further reduced height for mobile */
+    padding: 20px 15px 70px;
+  }
+  
+  .chatbox .chat p {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .chat-input textarea {
+    height: 45px;
+    font-size: 0.9rem;
+  }
+  
+  .chat-input span {
+    height: 45px;
+    line-height: 45px;
+  }
+}
+
 .dark-mode {
   background-color: #1a1a2e; 
 }

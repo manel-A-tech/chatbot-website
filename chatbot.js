@@ -28,7 +28,7 @@ const sendChatBtn = document.querySelector(".chat-input span");
 const chatbox = document.querySelector(".chatbox");
 let userMsg;
 
-// Configure your Rasa server URL with the proper protocol and webhook endpoint
+
 const RASA_SERVER_URL = "https://intelligent-chatbot-for-cellule-1275-des-startup-production.up.railway.app/webhooks/rest/webhook";
 
 const createChatSection = (msg, className) => {
@@ -108,7 +108,6 @@ const handleChat = async () => {
       if (response.text) {
         chatbox.appendChild(createChatSection(response.text, "incoming"));
       }
-      // Handle other response types like images, buttons, etc. if needed
     });
   } else {
     chatbox.appendChild(createChatSection("I didn't get a response. Please try again.", "incoming"));

@@ -191,6 +191,7 @@ input:checked + .label .circle{
 
 
 /* Media queries for different screen sizes */
+/* Media queries for different screen sizes */
 @media (max-width: 768px) {
   .chatbot {
     width: 95vw;
@@ -222,19 +223,16 @@ input:checked + .label .circle{
 
 @media (max-width: 480px) {
   .chatbot {
-    width: 100vw;
-    height: 100vh; /* Full viewport height on mobile */
-    max-height: none;
-    border-radius: 0; /* Remove border radius for full screen */
-    top: 0;
-    left: 0;
-    transform: none;
-    position: fixed;
+    width: 90vw; /* Keep some margin to show blue background */
+    height: 80vh; /* Use most of viewport but not full screen */
+    max-height: 600px;
+    border-radius: 10px; /* Keep border radius */
+    /* Keep centered positioning */
   }
   
   .chatbot header {
     padding: 12px 15px;
-    border-radius: 0;
+    border-radius: 10px 10px 0 0; /* Keep rounded corners */
   }
   
   .logo {
@@ -258,7 +256,7 @@ input:checked + .label .circle{
   
   .chat-input {
     padding: 12px 15px;
-    border-radius: 0;
+    border-radius: 0 0 10px 10px; /* Keep rounded bottom corners */
   }
   
   .chat-input textarea {
@@ -276,10 +274,11 @@ input:checked + .label .circle{
   }
 }
 
-/* Handle keyboard appearance on mobile */
+/* Handle keyboard appearance on mobile - make chatbot smaller when keyboard shows */
 @media (max-width: 480px) and (max-height: 600px) {
   .chatbot {
-    height: 100vh;
+    height: 70vh; /* Smaller height when keyboard appears */
+    max-height: 500px;
   }
   
   .chatbot .chatbox {
@@ -291,7 +290,7 @@ input:checked + .label .circle{
   }
 }
 
-
+/*dark mode styling*/
 .dark-mode {
   background-color: #1a1a2e; 
 }

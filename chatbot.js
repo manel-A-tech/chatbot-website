@@ -110,7 +110,7 @@ const handleChat = async () => {
       }
     });
   } else {
-    chatbox.appendChild(createChatSection("I didn't get a response. Please try again.", "incoming"));
+    chatbox.appendChild(createChatSection("Sorry I don't have an answear for this question, you can contact the Startup's Hall USTHB : usthb.startup.hall@gmail.com or ENEURSHIP DEVELOPEMENT CENTER: cde.entrepreneurship@usthb.dz or TECHINNOV INCOBATOR : techinnovusthb.incubateru@gmail.com ", "incoming"));
   }
   
   // Scroll to bottom again after all responses are added

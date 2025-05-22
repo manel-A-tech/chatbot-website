@@ -29,7 +29,7 @@ const chatbox = document.querySelector(".chatbox");
 let userMsg;
 
 
-const RASA_SERVER_URL = "https://manel-project.onrender.com/webhooks/rest/webhook";
+const RASA_SERVER_URL = "https://intelligent-chatbot-for-cellule-1275-des-startup-production.up.railway.app/webhooks/rest/webhook";
 
 const createChatSection = (msg, className) => {
   const chatSection = document.createElement("section");
